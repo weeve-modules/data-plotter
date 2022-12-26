@@ -6,16 +6,14 @@ It sends data with REST API POST request to the next module.
 from os import getenv
 from requests import exceptions, post
 from logging import getLogger
+from module.params import PARAMS
 
 log = getLogger("send_data")
 
 
-def send_data(processed_data: any) -> str:
+def send_data() -> str:
     """
     Send processed data to the next module.
-
-    Args:
-        processed_data (any): Processed data that are send to the next module in the edge application as a single dictionary or a list of dictionaries.
 
     Returns:
         str: Error message if posting data to the next module failed or None if successful.
@@ -29,10 +27,15 @@ def send_data(processed_data: any) -> str:
         # for collecting REST API POST responses
         failed_responses = []
 
+        # prepare graph file to send to the next module (we need to cast it to file object)
+        graph_file = {
+            PARAMS['OUTPUT_LABEL']: open("../module_assets/chart.png", 'rb'),
+        }
+
         # fan-out
         for url in urls:
             # send data to the next module
-            response = post(url=url, json=processed_data)
+            response = post(url=url, files=graph_file)
 
             log.debug(
                 f"Sent data to url {url} | Response: {response.status_code} {response.reason}"
