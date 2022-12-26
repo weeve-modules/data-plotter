@@ -1,5 +1,8 @@
 FROM python:3.8-slim
 
+# create a folder to store plotted charts
+RUN mkdir assets
+
 # copy docker-entrypoint and requirements to initialize multi-stage build
 COPY ./docker/docker-entrypoint.sh ./requirements.txt /app/
 

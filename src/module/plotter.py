@@ -9,4 +9,4 @@ def plot_graph(x_axis, y_axis):
     plt.title(PARAMS['GRAPH_TITLE'])
 
     # save plot to this location
-    plt.savefig("../module_assets/chart.png")
+    plt.savefig("assets/chart.png")

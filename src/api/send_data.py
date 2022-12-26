@@ -29,7 +29,7 @@ def send_data() -> str:
 
         # prepare graph file to send to the next module (we need to cast it to file object)
         graph_file = {
-            PARAMS['OUTPUT_LABEL']: open("../module_assets/chart.png", 'rb'),
+            PARAMS['OUTPUT_LABEL']: open("assets/chart.png", 'rb'),
         }
 
         # fan-out
