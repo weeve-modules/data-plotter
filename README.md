@@ -67,8 +67,8 @@ Input to this module is:
 
 ```json
 {
-    "label-1": 12,
-    "label-2": "speed"
+    "temperature": 12,
+    "timestamp": "12:50"
 }
 ```
 
@@ -77,12 +77,12 @@ Input to this module is:
 ```json
 [
     {
-        "label-1": 12,
-        "label-2": "speed"
+        "temperature": 12,
+        "pressure": 14
     },
     {
-        "label-1": 15,
-        "label-2": "volume"
+        "temperature": 15,
+        "pressure": 17
     }
 ]
 ```
