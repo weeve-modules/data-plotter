@@ -18,7 +18,7 @@
 
 ## Description
 
-This module collects some amount of data (Sample Size) and then plots them together. Later the module sends the graph as the PNG file to the next module.
+This module collects some amount of data (Sample Size) and then plots them together. Later the module sends the graph as the PNG file to the next module. Since the module outputs `multipart/form-data` instead of `application/json`, currently only [Gmail](https://github.com/weeve-modules/gmail) module in weeve suite accepts the output of this module.
 
 ## Environment Variables
 
@@ -90,4 +90,4 @@ Input to this module is:
 
 ## Output
 
-Output of this module is a PNG file with the plotted graph sent to the next module.
+Output of this module is a PNG file with the plotted graph sent to the next module (`multipart/form-data`).
