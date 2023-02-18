@@ -37,6 +37,7 @@ The following module configurations can be provided in a data service designer s
 | Graph Color             | GRAPH_COLOR           | string  | Color of the graph (`red`, `blue`, `green`, `cyan`, `magenta`, `yellow`, `black`).                                           |
 | Graph Linestyle         | GRAPH_LINESTYLE       | string  | Linestyle of the graph (`solid`, `dashed`, `dashdot`, `dotted`).                                                             |
 | Graph Marker            | GRAPH_MARKER          | string  | Marker of the graph (`.`, `o`, `v`, `^`, `<`, `>`, `*`, `+`, `x`).                                                           |
+| Grid Lines              | GRID_LINES            | string  | Configure the grid lines by selecting the axis to apply the changes on (`None`, `both`, `x`, `y`).                           |
 | Output Label            | OUTPUT_LABEL          | string  | The output label at which graph file is dispatched.                                                                          |
 
 ### Set by the weeve Agent on the edge-node

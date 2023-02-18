@@ -95,6 +95,17 @@ envs:
       - '+'
       - 'x'
     dependencies: []
+  - name: Grid Lines
+    key: GRID_LINES
+    description: Configure the grid lines by selecting the axis to apply the changes on.
+    value: 'None'
+    type: 'select'
+    options:
+      - 'None'
+      - 'both'
+      - 'x'
+      - 'y'
+    dependencies: []
   - name: Output Label
     key: OUTPUT_LABEL
     description: The output label at which graph file is dispatched.

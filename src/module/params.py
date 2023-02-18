@@ -10,5 +10,6 @@ PARAMS = {
     "GRAPH_COLOR": getenv("GRAPH_COLOR", "red"),
     "GRAPH_LINESTYLE": getenv("GRAPH_LINESTYLE", "dashed"),
     "GRAPH_MARKER": getenv("GRAPH_MARKER", "o"),
+    "GRID_LINES": getenv("GRID_LINES", "both"),
     "OUTPUT_LABEL": getenv("OUTPUT_LABEL", "chart-file")
 }

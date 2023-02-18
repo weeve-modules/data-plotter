@@ -8,5 +8,8 @@ def plot_graph(x_axis, y_axis):
     plt.ylabel(PARAMS['Y_AXIS_LABEL'])
     plt.title(PARAMS['GRAPH_TITLE'])
 
+    if not PARAMS['GRID_LINES'] == 'None':
+        plt.grid(axis = PARAMS['GRID_LINES'])
+
     # save plot to this location
     plt.savefig("assets/chart.png")
