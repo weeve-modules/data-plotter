@@ -15,6 +15,7 @@ log = getLogger("module")
 x_axis = []
 y_axis = []
 
+
 def record_data(data):
     global x_axis, y_axis
 
