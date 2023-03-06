@@ -7,6 +7,7 @@ from os import getenv
 from requests import exceptions, post
 from logging import getLogger
 from module.params import PARAMS
+import base64
 
 log = getLogger("send_data")
 
@@ -28,14 +29,16 @@ def send_data() -> str:
         failed_responses = []
 
         # prepare graph file to send to the next module (we need to cast it to file object)
-        graph_file = {
-            PARAMS['OUTPUT_LABEL']: open("assets/chart.png", 'rb'),
+        file_json = {
+            PARAMS["OUTPUT_LABEL"]: base64.b64encode(
+                open("assets/chart.png", "rb").read()
+            ).decode("utf-8"),
         }
 
         # fan-out
         for url in urls:
             # send data to the next module
-            response = post(url=url, files=graph_file)
+            response = post(url=url, json=file_json)
 
             log.debug(
                 f"Sent data to url {url} | Response: {response.status_code} {response.reason}"

@@ -10,6 +10,7 @@ from logging import getLogger
 # set up logging
 log = getLogger("processing_thread")
 
+
 class ProcessingThread(Thread):
     def __init__(self, data_queue):
         super(ProcessingThread, self).__init__()
