@@ -1,14 +1,14 @@
 displayName: 'Data Plotter'
 moduleName: 'data-plotter'
 description: 'Receive and plot data, then send the graph file to the next module.'
-versionName: 'v1.0.0'
+versionName: 'v1.0.1'
 isPublic: true
 categories:
   - 'Data Science'
 type: 'Processing'
 image:
   name: 'weevenetwork/data-plotter'
-  tag: 'v1.0.0'
+  tag: 'v1.0.1'
   homepage: 'https://hub.docker.com/r/weevenetwork/data-plotter'
 repository: 'https://github.com/weeve-modules/data-plotter'
 envs:

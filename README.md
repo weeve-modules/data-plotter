@@ -3,7 +3,7 @@
 |           |                                                                                 |
 | --------- | ------------------------------------------------------------------------------- |
 | Name      | Data Plotter                                                                    |
-| Version   | v1.0.0                                                                          |
+| Version   | v1.0.1                                                                          |
 | DockerHub | [weevenetwork/data-plotter](https://hub.docker.com/r/weevenetwork/data-plotter) |
 | Authors   | Jakub Grzelak                                                                   |
 
